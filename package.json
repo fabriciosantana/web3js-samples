@@ -1,0 +1,14 @@
+{
+  "name": "web3js-samples",
+  "version": "1.0.0",
+  "description": "Web3js samples",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fabricio Santana",
+  "license": "ISC",
+  "dependencies": {
+    "web3": "^1.6.0"
+  }
+}

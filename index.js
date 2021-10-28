@@ -67,3 +67,32 @@ async function getBalanceEthers(){
 
     return balance
 }
+
+async function getContractData(){
+
+    let address = "0x92bd6a476919ee9eB0D456793D9515B74910A3a8";
+
+    fetch("./artifacts/contracts/Greeter.sol/Greeter.json").then(response => {
+        return response.json();
+    }).then( async function(data) {
+        console.log(data)
+        
+        const greeter = new web3.eth.Contract(data.abi, address)
+        greeter.setProvider(web3.givenProvider)
+        
+        document.getElementById("lblContractAddress").innerHTML = await greeter.methods.greet().call(); //.then(console.log)
+
+    });
+
+
+    
+    
+    
+    
+    //console.log(contract.address);
+
+}
+
+async function getContractJson(){
+
+}
